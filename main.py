@@ -1,11 +1,15 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+import json
 import pandas as pd
 from math import pi
 
+# Ouverture de la base de donnée JSON
+df = pd.read_json('Vc.json')
+
 ### Commun ###
-def page_type_usinage(fenetre, flux_pages, index_page):
+def page_usinage(fenetre, flux_pages, index_page):
     # Titre de la page
     titre = tk.Label(fenetre, text="Sélectionner un type d'usinage", font=("Arial", 16))
     titre.pack(pady=20)
@@ -17,19 +21,20 @@ def page_type_usinage(fenetre, flux_pages, index_page):
     combobox_usinage.pack(pady=10)
 
     def on_button_click():
-        type_usinage = combobox_usinage.get()
-        if type_usinage == "Fraisage":
+        global usinage
+        usinage = combobox_usinage.get()
+        if usinage == "Fraisage":
             changement_page(fenetre, fraisage, 1)
-        elif type_usinage == "Tournage":
+        elif usinage == "Tournage":
             changement_page(fenetre, tournage, 1)
-        elif type_usinage == "Percage":
+        elif usinage == "Percage":
             changement_page(fenetre, percage, 1)
-        elif type_usinage == "Taraudage":
+        elif usinage == "Taraudage":
             changement_page(fenetre, taraudage, 1)
-        elif type_usinage == "Alésage":
+        elif usinage == "Alésage":
             changement_page(fenetre, alesage, 1)
         else:
-            messagebox.showinfo("Info", f"Le type d'usinage '{type_usinage}' n'est pas encore implémenté.")
+            messagebox.showinfo("Info", f"Le type d'usinage '{usinage}' n'est pas encore implémenté.")
 
     # Suivant
     bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: on_button_click())
@@ -49,19 +54,21 @@ def page_materiaux(fenetre, flux_pages, index_page):
                  "Fonte lamellaire (K)",
                  "Fonte modulaire (K)",
                  "Fonte sphéroïdale (K)",
-                 "Aluminium faible dureté + silicium comme 2030 (N)",
-                 "Aluminium forte dureté + silicium comme 6060(N)",
+                 "Aluminium faible dureté + silicium (N)",
+                 "Aluminium forte dureté + silicium (N)",
                  "Aluminium +12% de silicium (N)"
                  ]
     combobox_materiaux = ttk.Combobox(fenetre, values=materiaux)
     combobox_materiaux.set(materiaux[0])
     combobox_materiaux.pack(pady=10)
 
-    global materiau
-    materiau = combobox_materiaux.get()
+    def on_button_click():
+        global materiau
+        materiau = combobox_materiaux.get()
+        changement_page(fenetre, flux_pages, index_page + 1)
 
     # Suivant
-    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: changement_page(fenetre, flux_pages, index_page + 1))
+    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: on_button_click())
     bouton_suivant.pack(pady=20)
 
 def changement_page(fenetre, flux_pages, index):
@@ -82,15 +89,17 @@ def page_operation_fraisage(fenetre, flux_pages, index_page):
 
     # Liste des types d'usinage
     types_usinage_fraisage = ["Surfacage", "Rainurage", "Contournage", "Sciage", "Plongée verticale"]
-    combobox_usinage_fraisage = ttk.Combobox(fenetre, values=types_usinage_fraisage)
-    combobox_usinage_fraisage.set(types_usinage_fraisage[0])
-    combobox_usinage_fraisage.pack(pady=10)
+    combobox_operation_fraisage = ttk.Combobox(fenetre, values=types_usinage_fraisage)
+    combobox_operation_fraisage.set(types_usinage_fraisage[0])
+    combobox_operation_fraisage.pack(pady=10)
 
-    global fraisage
-    fraisage = combobox_usinage_fraisage.get()
+    def on_button_click():
+        global operation
+        operation = combobox_operation_fraisage.get()
+        changement_page(fenetre, flux_pages, index_page + 1)
 
     # Suivant
-    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: changement_page(fenetre, flux_pages, index_page + 1))
+    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: on_button_click())
     bouton_suivant.pack(pady=20)
 
 def page_outil_fraisage(fenetre, flux_pages, index_page):
@@ -104,11 +113,13 @@ def page_outil_fraisage(fenetre, flux_pages, index_page):
     combobox_outil_fraisage.set(outils[0])
     combobox_outil_fraisage.pack(pady=10)
 
-    global outil
-    outil = combobox_outil_fraisage.get()
+    def on_button_click():
+        global outil
+        outil = combobox_outil_fraisage.get()
+        changement_page(fenetre, flux_pages, index_page + 1)
 
     # Suivant
-    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: changement_page(fenetre, flux_pages, index_page + 1))
+    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: on_button_click())
     bouton_suivant.pack(pady=20)
 
 def page_resultat_fraisage(fenetre):
@@ -136,11 +147,13 @@ def page_operation_tournage(fenetre, flux_pages, index_page):
     combobox_operation_tournage.set(operations[0])
     combobox_operation_tournage.pack(pady=10)
 
-    global operation
-    operation = combobox_operation_tournage.get()
+    def on_button_click():
+        global operation
+        operation = combobox_operation_tournage.get()
+        changement_page(fenetre, flux_pages, index_page + 1)
 
     # Suivant
-    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: changement_page(fenetre, flux_pages, index_page + 1))
+    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: on_button_click())
     bouton_suivant.pack(pady=20)
 
 def page_outil_tournage(fenetre, flux_pages, index_page):
@@ -155,14 +168,12 @@ def page_outil_tournage(fenetre, flux_pages, index_page):
     combobox_outil_tournage.pack(pady=10)
 
     def on_button_click():
-        page = combobox_outil_tournage.get()
-        return page
-
-    global outil
-    outil = combobox_outil_tournage.get()
+        global outil
+        outil = combobox_outil_tournage.get()
+        changement_page(fenetre, flux_pages, index_page + 1)
 
     # Suivant
-    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: changement_page(fenetre, flux_pages, index_page + 1))
+    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: on_button_click())
     bouton_suivant.pack(pady=20)
 
 def page_rayon_bec(fenetre, flux_pages, index_page):
@@ -229,6 +240,15 @@ def page_diametre_piece(fenetre, flux_pages, index_page):
     bouton_suivant.pack(pady=20)
 
 def page_resultat_tournage(fenetre, flux_pages, index):
+
+    # Accéder au dictionnaire correspondant à la ligne JSON
+    ligne = df.iloc[0]
+
+    # Vérifier si l'usinage correspond et récupérer la valeur du matériau
+    if ligne['usinage'] == usinage:
+        # Récupérer le nombre associé à la matière
+        valeur_materiau = ligne['materiau'].get(materiau)
+
     # Calculs
     avance =55
     profondeur_passe= 66
@@ -308,11 +328,13 @@ def page_vis(fenetre, flux_pages, index_page):
     combobox_vis.set(m_vis[0])
     combobox_vis.pack(pady=10)
 
-    global vis
-    vis = combobox_vis.get()
+    def on_button_click():
+        global vis
+        vis = combobox_vis.get()
+        changement_page(fenetre, flux_pages, index_page + 1)
 
     # Suivant
-    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: changement_page(fenetre, flux_pages, index_page + 1))
+    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: on_button_click())
     bouton_suivant.pack(pady=20)
 
 def page_resultat_taraudage(fenetre, flux_pages, index):
@@ -353,19 +375,46 @@ def page_resultat_alesage(fenetre, flux_pages, index):
     bouton_terminer.pack(pady=20)
 
 # Variables
+usinage = ""
 materiau = ""
 operation = ""
 outil = ""
 rayon = ""
 diametre = ""
 vis = ""
+vitesse_de_coupe = {}
+vitesse = 0
 
 # Flux de page
-fraisage = [page_type_usinage, page_materiaux, page_outil_fraisage, page_operation_fraisage, page_resultat_fraisage]
-tournage = [page_type_usinage, page_materiaux, page_outil_tournage, page_operation_tournage, page_rayon_bec, page_diametre_piece, page_resultat_tournage]
-percage = [page_type_usinage, page_materiaux, page_outil_tournage, page_diametre_foret, page_resultat_foret]
-taraudage = [page_type_usinage, page_materiaux, page_vis, page_resultat_taraudage]
-alesage = [page_type_usinage, page_materiaux, page_resultat_alesage]
+fraisage = [page_usinage,
+            page_materiaux,
+            page_outil_fraisage,
+            page_operation_fraisage,
+            page_resultat_fraisage
+            ]
+tournage = [page_usinage,
+            page_materiaux,
+            page_outil_tournage,
+            page_operation_tournage,
+            page_rayon_bec,
+            page_diametre_piece,
+            page_resultat_tournage
+            ]
+percage = [page_usinage,
+           page_materiaux,
+           page_outil_tournage,
+           page_diametre_foret,
+           page_resultat_foret
+           ]
+taraudage = [page_usinage,
+             page_materiaux,
+             page_vis,
+             page_resultat_taraudage
+             ]
+alesage = [page_usinage,
+           page_materiaux,
+           page_resultat_alesage
+           ]
 
 # Fenetre principale
 main_fenetre = tk.Tk()

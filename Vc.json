@@ -1,0 +1,542 @@
+[
+  {
+    "usinage":  "Tournage",
+    "operation":  "Ebauche extérieure",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.1},
+    "materiau": {
+      "Acier non allié (P)": 50,
+      "Acier faiblement allié (P)": 30,
+      "Acier fortement allié (P)": 20,
+      "Acier moulé fortement allié (P)": 30,
+      "Inox (M)": 25,
+      "Fonte lamellaire (K)": 40,
+      "Fonte modulaire (K)": 30,
+      "Fonte sphéroïdale (K)": 55,
+      "Aluminium faible dureté + silicium (N)": 250,
+      "Aluminium forte dureté + silicium (N)": 120,
+      "Aluminium +12% de silicium (N)": 80
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Ebauche extérieure",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.1,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 40,
+      "Acier faiblement allié (P)": 20,
+      "Acier fortement allié (P)": 15,
+      "Acier moulé fortement allié (P)": 20,
+      "Inox (M)": 20,
+      "Fonte lamellaire (K)": 30,
+      "Fonte modulaire (K)": 25,
+      "Fonte sphéroïdale (K)": 45,
+      "Aluminium faible dureté + silicium (N)": 200,
+      "Aluminium forte dureté + silicium (N)": 80,
+      "Aluminium +12% de silicium (N)": 40
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Ebauche extérieure",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 250,
+      "Acier faiblement allié (P)": 150,
+      "Acier fortement allié (P)": 120,
+      "Acier moulé fortement allié (P)": 150,
+      "Inox (M)": 150,
+      "Fonte lamellaire (K)": 80,
+      "Fonte modulaire (K)": 100,
+      "Fonte sphéroïdale (K)": 90,
+      "Aluminium faible dureté + silicium (N)": 550,
+      "Aluminium forte dureté + silicium (N)": 250,
+      "Aluminium +12% de silicium (N)": 120
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Ebauche extérieure",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.2,
+      "maxi":  0.3},
+    "materiau": {
+      "Acier non allié (P)": 200,
+      "Acier faiblement allié (P)": 130,
+      "Acier fortement allié (P)": 100,
+      "Acier moulé fortement allié (P)": 120,
+      "Inox (M)": 130,
+      "Fonte lamellaire (K)": 60,
+      "Fonte modulaire (K)": 80,
+      "Fonte sphéroïdale (K)": 70,
+      "Aluminium faible dureté + silicium (N)": 400,
+      "Aluminium forte dureté + silicium (N)": 200,
+      "Aluminium +12% de silicium (N)": 100
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Ebauche intérieure",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.1},
+    "materiau": {
+      "Acier non allié (P)": 25,
+      "Acier faiblement allié (P)": 15,
+      "Acier fortement allié (P)": 10,
+      "Acier moulé fortement allié (P)": 15,
+      "Inox (M)": 12.5,
+      "Fonte lamellaire (K)": 20,
+      "Fonte modulaire (K)": 15,
+      "Fonte sphéroïdale (K)": 27.5,
+      "Aluminium faible dureté + silicium (N)": 125,
+      "Aluminium forte dureté + silicium (N)": 60,
+      "Aluminium +12% de silicium (N)": 40
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Ebauche intérieure",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.1,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 20,
+      "Acier faiblement allié (P)": 10,
+      "Acier fortement allié (P)": 7.5,
+      "Acier moulé fortement allié (P)": 10,
+      "Inox (M)": 10,
+      "Fonte lamellaire (K)": 150,
+      "Fonte modulaire (K)": 12.5,
+      "Fonte sphéroïdale (K)": 22.5,
+      "Aluminium faible dureté + silicium (N)": 100,
+      "Aluminium forte dureté + silicium (N)": 40,
+      "Aluminium +12% de silicium (N)": 20
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Ebauche intérieure",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 125,
+      "Acier faiblement allié (P)": 75,
+      "Acier fortement allié (P)": 60,
+      "Acier moulé fortement allié (P)": 75,
+      "Inox (M)": 75,
+      "Fonte lamellaire (K)": 40,
+      "Fonte modulaire (K)": 50,
+      "Fonte sphéroïdale (K)": 45,
+      "Aluminium faible dureté + silicium (N)": 275,
+      "Aluminium forte dureté + silicium (N)": 125,
+      "Aluminium +12% de silicium (N)": 60
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Ebauche intérieure",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.2,
+      "maxi":  0.3},
+    "materiau": {
+      "Acier non allié (P)": 100,
+      "Acier faiblement allié (P)": 65,
+      "Acier fortement allié (P)": 50,
+      "Acier moulé fortement allié (P)": 60,
+      "Inox (M)": 65,
+      "Fonte lamellaire (K)": 30,
+      "Fonte modulaire (K)": 40,
+      "Fonte sphéroïdale (K)": 35,
+      "Aluminium faible dureté + silicium (N)": 200,
+      "Aluminium forte dureté + silicium (N)": 100,
+      "Aluminium +12% de silicium (N)": 50
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Finition extérieure",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.1},
+    "materiau": {
+      "Acier non allié (P)": 50,
+      "Acier faiblement allié (P)": 30,
+      "Acier fortement allié (P)": 20,
+      "Acier moulé fortement allié (P)": 30,
+      "Inox (M)": 25,
+      "Fonte lamellaire (K)": 40,
+      "Fonte modulaire (K)": 30,
+      "Fonte sphéroïdale (K)": 55,
+      "Aluminium faible dureté + silicium (N)": 250,
+      "Aluminium forte dureté + silicium (N)": 120,
+      "Aluminium +12% de silicium (N)": 80
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Finition extérieure",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.1,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 40,
+      "Acier faiblement allié (P)": 20,
+      "Acier fortement allié (P)": 15,
+      "Acier moulé fortement allié (P)": 20,
+      "Inox (M)": 20,
+      "Fonte lamellaire (K)": 30,
+      "Fonte modulaire (K)": 25,
+      "Fonte sphéroïdale (K)": 45,
+      "Aluminium faible dureté + silicium (N)": 200,
+      "Aluminium forte dureté + silicium (N)": 80,
+      "Aluminium +12% de silicium (N)": 40
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Finition extérieure",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 250,
+      "Acier faiblement allié (P)": 150,
+      "Acier fortement allié (P)": 120,
+      "Acier moulé fortement allié (P)": 150,
+      "Inox (M)": 150,
+      "Fonte lamellaire (K)": 80,
+      "Fonte modulaire (K)": 100,
+      "Fonte sphéroïdale (K)": 90,
+      "Aluminium faible dureté + silicium (N)": 550,
+      "Aluminium forte dureté + silicium (N)": 250,
+      "Aluminium +12% de silicium (N)": 120
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Finition extérieure",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.2,
+      "maxi":  0.3},
+    "materiau": {
+      "Acier non allié (P)": 200,
+      "Acier faiblement allié (P)": 130,
+      "Acier fortement allié (P)": 100,
+      "Acier moulé fortement allié (P)": 120,
+      "Inox (M)": 130,
+      "Fonte lamellaire (K)": 60,
+      "Fonte modulaire (K)": 80,
+      "Fonte sphéroïdale (K)": 70,
+      "Aluminium faible dureté + silicium (N)": 400,
+      "Aluminium forte dureté + silicium (N)": 200,
+      "Aluminium +12% de silicium (N)": 100
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Finition intérieure",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.1},
+    "materiau": {
+      "Acier non allié (P)": 25,
+      "Acier faiblement allié (P)": 15,
+      "Acier fortement allié (P)": 10,
+      "Acier moulé fortement allié (P)": 15,
+      "Inox (M)": 12.5,
+      "Fonte lamellaire (K)": 20,
+      "Fonte modulaire (K)": 15,
+      "Fonte sphéroïdale (K)": 27.5,
+      "Aluminium faible dureté + silicium (N)": 125,
+      "Aluminium forte dureté + silicium (N)": 60,
+      "Aluminium +12% de silicium (N)": 40
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Finition intérieure",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.1,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 20,
+      "Acier faiblement allié (P)": 10,
+      "Acier fortement allié (P)": 7.5,
+      "Acier moulé fortement allié (P)": 10,
+      "Inox (M)": 10,
+      "Fonte lamellaire (K)": 150,
+      "Fonte modulaire (K)": 12.5,
+      "Fonte sphéroïdale (K)": 22.5,
+      "Aluminium faible dureté + silicium (N)": 100,
+      "Aluminium forte dureté + silicium (N)": 40,
+      "Aluminium +12% de silicium (N)": 20
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Finition intérieure",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 125,
+      "Acier faiblement allié (P)": 75,
+      "Acier fortement allié (P)": 60,
+      "Acier moulé fortement allié (P)": 75,
+      "Inox (M)": 75,
+      "Fonte lamellaire (K)": 40,
+      "Fonte modulaire (K)": 50,
+      "Fonte sphéroïdale (K)": 45,
+      "Aluminium faible dureté + silicium (N)": 275,
+      "Aluminium forte dureté + silicium (N)": 125,
+      "Aluminium +12% de silicium (N)": 60
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Finition intérieure",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.2,
+      "maxi":  0.3},
+    "materiau": {
+      "Acier non allié (P)": 100,
+      "Acier faiblement allié (P)": 65,
+      "Acier fortement allié (P)": 50,
+      "Acier moulé fortement allié (P)": 60,
+      "Inox (M)": 65,
+      "Fonte lamellaire (K)": 30,
+      "Fonte modulaire (K)": 40,
+      "Fonte sphéroïdale (K)": 35,
+      "Aluminium faible dureté + silicium (N)": 200,
+      "Aluminium forte dureté + silicium (N)": 100,
+      "Aluminium +12% de silicium (N)": 50
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Tronconnage",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.1},
+    "materiau": {
+      "Acier non allié (P)": 12.5,
+      "Acier faiblement allié (P)": 7.5,
+      "Acier fortement allié (P)": 5,
+      "Acier moulé fortement allié (P)": 7.5,
+      "Inox (M)": 6.25,
+      "Fonte lamellaire (K)": 10,
+      "Fonte modulaire (K)": 7.5,
+      "Fonte sphéroïdale (K)": 13.75,
+      "Aluminium faible dureté + silicium (N)": 62.5,
+      "Aluminium forte dureté + silicium (N)": 30,
+      "Aluminium +12% de silicium (N)": 20
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Tronconnage",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.1,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 10,
+      "Acier faiblement allié (P)": 5,
+      "Acier fortement allié (P)": 3.75,
+      "Acier moulé fortement allié (P)": 5,
+      "Inox (M)": 5,
+      "Fonte lamellaire (K)": 7.5,
+      "Fonte modulaire (K)": 6.25,
+      "Fonte sphéroïdale (K)": 11.25,
+      "Aluminium faible dureté + silicium (N)": 50,
+      "Aluminium forte dureté + silicium (N)": 20,
+      "Aluminium +12% de silicium (N)": 10
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Tronconnage",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 62.5,
+      "Acier faiblement allié (P)": 37.5,
+      "Acier fortement allié (P)": 30,
+      "Acier moulé fortement allié (P)": 35.5,
+      "Inox (M)": 37.5,
+      "Fonte lamellaire (K)": 20,
+      "Fonte modulaire (K)": 25,
+      "Fonte sphéroïdale (K)": 22.5,
+      "Aluminium faible dureté + silicium (N)": 137.5,
+      "Aluminium forte dureté + silicium (N)": 62.5,
+      "Aluminium +12% de silicium (N)": 30
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Tronconnage",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.2,
+      "maxi":  0.3},
+    "materiau": {
+      "Acier non allié (P)": 50,
+      "Acier faiblement allié (P)": 32.5,
+      "Acier fortement allié (P)": 25,
+      "Acier moulé fortement allié (P)": 30,
+      "Inox (M)": 32.5,
+      "Fonte lamellaire (K)": 15,
+      "Fonte modulaire (K)": 20,
+      "Fonte sphéroïdale (K)": 17.5,
+      "Aluminium faible dureté + silicium (N)": 200,
+      "Aluminium forte dureté + silicium (N)": 50,
+      "Aluminium +12% de silicium (N)": 25
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Gorge",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.1},
+    "materiau": {
+      "Acier non allié (P)": 6.5,
+      "Acier faiblement allié (P)": 3.75,
+      "Acier fortement allié (P)": 2.5,
+      "Acier moulé fortement allié (P)": 3.75,
+      "Inox (M)": 3.125,
+      "Fonte lamellaire (K)": 5,
+      "Fonte modulaire (K)": 3.75,
+      "Fonte sphéroïdale (K)": 6.875,
+      "Aluminium faible dureté + silicium (N)": 31.25,
+      "Aluminium forte dureté + silicium (N)": 15,
+      "Aluminium +12% de silicium (N)": 10
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Gorge",
+    "outil":  "ARS",
+    "avance":  {
+      "mini":  0.1,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 5,
+      "Acier faiblement allié (P)": 2.5,
+      "Acier fortement allié (P)": 1.875,
+      "Acier moulé fortement allié (P)": 2.5,
+      "Inox (M)": 2.5,
+      "Fonte lamellaire (K)": 3.75,
+      "Fonte modulaire (K)": 3.125,
+      "Fonte sphéroïdale (K)": 5.625,
+      "Aluminium faible dureté + silicium (N)": 25,
+      "Aluminium forte dureté + silicium (N)": 10,
+      "Aluminium +12% de silicium (N)": 5
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Gorge",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.05,
+      "maxi":  0.2},
+    "materiau": {
+      "Acier non allié (P)": 31.25,
+      "Acier faiblement allié (P)": 18.75,
+      "Acier fortement allié (P)": 15,
+      "Acier moulé fortement allié (P)": 18.75,
+      "Inox (M)": 18.75,
+      "Fonte lamellaire (K)": 10,
+      "Fonte modulaire (K)": 12.5,
+      "Fonte sphéroïdale (K)": 11.25,
+      "Aluminium faible dureté + silicium (N)": 28.75,
+      "Aluminium forte dureté + silicium (N)": 31.25,
+      "Aluminium +12% de silicium (N)": 15
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Gorge",
+    "outil":  "Carbure",
+    "avance":  {
+      "mini":  0.2,
+      "maxi":  0.3},
+    "materiau": {
+      "Acier non allié (P)": 25,
+      "Acier faiblement allié (P)": 16.25,
+      "Acier fortement allié (P)": 12.5,
+      "Acier moulé fortement allié (P)": 15,
+      "Inox (M)": 16.25,
+      "Fonte lamellaire (K)": 7.5,
+      "Fonte modulaire (K)": 10,
+      "Fonte sphéroïdale (K)": 8.75,
+      "Aluminium faible dureté + silicium (N)": 50,
+      "Aluminium forte dureté + silicium (N)": 25,
+      "Aluminium +12% de silicium (N)": 12.5
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Filetage",
+    "outil":  "ARS",
+    "materiau": {
+      "Acier non allié (P)": 35,
+      "Acier faiblement allié (P)": 20,
+      "Acier fortement allié (P)": 15,
+      "Acier moulé fortement allié (P)": 20,
+      "Inox (M)": 20,
+      "Fonte lamellaire (K)": 20,
+      "Fonte modulaire (K)": 15,
+      "Fonte sphéroïdale (K)": 25,
+      "Aluminium faible dureté + silicium (N)": 150,
+      "Aluminium forte dureté + silicium (N)": 90,
+      "Aluminium +12% de silicium (N)": 45
+      }
+  },
+  {
+    "usinage":  "Tournage",
+    "operation":  "Filetage",
+    "outil":  "Carbure",
+    "materiau": {
+      "Acier non allié (P)": 120,
+      "Acier faiblement allié (P)": 80,
+      "Acier fortement allié (P)": 60,
+      "Acier moulé fortement allié (P)": 75,
+      "Inox (M)": 90,
+      "Fonte lamellaire (K)": 30,
+      "Fonte modulaire (K)": 40,
+      "Fonte sphéroïdale (K)": 40,
+      "Aluminium faible dureté + silicium (N)": 230,
+      "Aluminium forte dureté + silicium (N)": 110,
+      "Aluminium +12% de silicium (N)": 60
+      }
+  }
+]
