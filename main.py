@@ -71,6 +71,26 @@ def page_materiaux(fenetre, flux_pages, index_page):
     bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: on_button_click())
     bouton_suivant.pack(pady=20)
 
+def page_finition(fenetre, flux_pages, index_page):
+    # Titre de la page
+    titre = tk.Label(fenetre, text="Sélectionner une finition", font=("Arial", 16))
+    titre.pack(pady=20)
+
+    # Liste des matériaux
+    finition = ["Ebauche", "Finition"]
+    combobox_finition = ttk.Combobox(fenetre, values=finition)
+    combobox_finition.set(finition[0])
+    combobox_finition.pack(pady=10)
+
+    def on_button_click():
+        global finition
+        finition = combobox_finition.get()
+        changement_page(fenetre, flux_pages, index_page + 1)
+
+    # Suivant
+    bouton_suivant = tk.Button(fenetre, text="Suivant", command=lambda: on_button_click())
+    bouton_suivant.pack(pady=20)
+
 def changement_page(fenetre, flux_pages, index):
     # Effacer la fenêtre
     for widget in fenetre.winfo_children():
@@ -142,7 +162,7 @@ def page_operation_tournage(fenetre, flux_pages, index_page):
     titre.pack(pady=20)
 
     # Liste des opérations
-    operations = ["Ebauche extérieure", "Ebauche intérieure", "Finition extérieure", "Finition intérieure", "Tronconnage", "Gorge", "Filetage"]
+    operations = ["Extérieure", "Intérieure", "Tronconnage", "Gorge", "Filetage"]
     combobox_operation_tournage = ttk.Combobox(fenetre, values=operations)
     combobox_operation_tournage.set(operations[0])
     combobox_operation_tournage.pack(pady=10)
@@ -240,17 +260,51 @@ def page_diametre_piece(fenetre, flux_pages, index_page):
     bouton_suivant.pack(pady=20)
 
 def page_resultat_tournage(fenetre, flux_pages, index):
-
     # Accéder au dictionnaire correspondant à la ligne JSON
     ligne = df.iloc[0]
 
     # Vérifier si l'usinage correspond et récupérer la valeur du matériau
-    if ligne['usinage'] == usinage:
-        # Récupérer le nombre associé à la matière
-        valeur_materiau = ligne['materiau'].get(materiau)
+    vitesse_de_coupe = ligne['materiau'].get(materiau)
 
-    # Calculs
-    avance =55
+    avance = None
+
+    ### Calculs
+    ## Avance
+    if operation == "Tronconnage" or operation == "Gorge":
+        avance = 0.1
+
+    # ARS Métaux dur
+    elif outil == "ARS" and finition == "Ebauche" and materiau in (
+            "Acier non allié (P)",
+            "Acier faiblement allié (P)",
+            "Acier fortement allié (P)",
+            "Acier moulé fortement allié (P)",
+            "Inox (M)",
+            "Fonte lamellaire (K)",
+            "Fonte modulaire (K)",
+            "Fonte sphéroïdale (K)"):
+        avance = 0.1
+
+    # ARS Matériaux non-férreux
+    elif outil == "ARS" and finition == "Ebauche" and materiau in (
+            "Aluminium faible dureté + silicium (N)",
+            "Aluminium forte dureté + silicium (N)",
+            "Aluminium +12% de silicium (N)"):
+        avance = 0.2
+
+    elif outil == "ARS" and finition == "Finition":
+        avance = 0.05
+
+    elif outil == "Carbure" and finition == "Ebauche":
+        avance = rayon * 0.4
+
+    elif outil == "Carbure" and finition == "Finition":
+        avance = rayon * 0.2
+
+    else:
+        messagebox.showerror("Erreur", "Une erreur s'est glissée")
+        quit()
+
     profondeur_passe= 66
     rotation =1000
 
@@ -378,24 +432,26 @@ def page_resultat_alesage(fenetre, flux_pages, index):
 usinage = ""
 materiau = ""
 operation = ""
+finition = ""
 outil = ""
 rayon = ""
 diametre = ""
 vis = ""
-vitesse_de_coupe = {}
-vitesse = 0
+
 
 # Flux de page
 fraisage = [page_usinage,
             page_materiaux,
-            page_outil_fraisage,
             page_operation_fraisage,
+            page_finition,
+            page_outil_fraisage,
             page_resultat_fraisage
             ]
 tournage = [page_usinage,
             page_materiaux,
-            page_outil_tournage,
             page_operation_tournage,
+            page_finition,
+            page_outil_tournage,
             page_rayon_bec,
             page_diametre_piece,
             page_resultat_tournage
